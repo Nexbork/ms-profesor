@@ -44,7 +44,7 @@ public class TeacherController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(teacherService.updateTeacher(teacher));
 	}
 	
-	@DeleteMapping
+	@DeleteMapping("/{id}")
 	public ResponseEntity<ResponseDto> deleteTeacher(@PathVariable("id") Long id){
 		return ResponseEntity.status(HttpStatus.OK).body(teacherService.deleteTeacher(id));
 	}
